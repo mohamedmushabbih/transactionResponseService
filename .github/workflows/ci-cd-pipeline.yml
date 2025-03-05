@@ -27,7 +27,7 @@ jobs:
         run: mvn clean install
 
       - name: Archive build artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: jar-file
           path: target/*.jar
@@ -65,7 +65,7 @@ jobs:
         run: mvn package
 
       - name: Upload packaged artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: package
           path: target/*.jar
@@ -76,7 +76,7 @@ jobs:
 
     steps:
       - name: Download package artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: package
 
@@ -92,7 +92,7 @@ jobs:
 
     steps:
       - name: Download package artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: package
 
@@ -108,7 +108,7 @@ jobs:
 
     steps:
       - name: Download package artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: package
 
